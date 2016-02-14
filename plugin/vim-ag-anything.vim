@@ -30,4 +30,7 @@ nnoremap <silent> <Plug>AgAnythingWord :set hlsearch<CR>:<C-U>set opfunc=<SID>Ag
 " https://github.com/bronson/vim-visual-star-search
 
 nmap gag <Plug>AgAnything
-nmap *   <Plug>AgAnythingWord
+
+if !exists("g:vim_ag_maintain_star")
+  nmap *   <Plug>AgAnythingWord
+endif
